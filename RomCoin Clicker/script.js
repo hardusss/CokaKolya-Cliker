@@ -1,11 +1,11 @@
 "use strict";
 $(document).ready(function () {
-    let taskEneble = true;
-    let score = 5000;
-    let click_score = 1;
-    let energy = 1000;
-    let local = JSON.parse(localStorage.getItem('user')) || {};
-    const MAX_ENERGY = 1000;
+    let taskEneble = true; // Змінна taskEneble забеспечує перевірку чи виконавв користувач певну таску
+    let score = 5000; // змінна score відповідає за кількість монет в користкувача
+    let click_score = 1; // кількість монет які даются при кліці на монету
+    let energy = 1000; // змінна energy забеспечує кількість кліків на монету ящо click_score == 3 то кожен раз від energy - 3
+    let local = JSON.parse(localStorage.getItem('user')) || {}; // Завантаження даних про користувача з локалки
+    const MAX_ENERGY = 1000; // максимальна енергія користувача
     const ENERGY_RECHARGE_RATE = 3; // +3 energy every 3 seconds
     const RECHARGE_INTERVAL = 3000; // 3 seconds in milliseconds
 
@@ -73,21 +73,27 @@ $(document).ready(function () {
     function handleClick(e) {
         e.preventDefault();
         if (energy > 0){
+            // при кліці в скор добавляєтся певна кількість поїнтів та зберігаєтся в локалку
             score += click_score;
             local.score = score;
+            // Збереження виконних тасок
             local.task = taskEneble;
+            // Збереження енергії та часу
             saveEnergyData(energy, getCurrentTimeInSeconds());
-
+            
+            // Зменшення енергії
             energy -= click_score;
             if (energy < 0){
                 energy = 0;
             }
             $('#user-energy').text(energy);
-
+            
+            // Зміна прогресбару
             let energy_progress = (energy / 1000) * 100;
             $('.prb').attr('aria-valuenow', score);
             $('.progress-bar').css('width', energy_progress + '%');
 
+            // при клічі на монетку появляєтся +1 на координнатах нажаття користувача
             let posX = e.clientX;
             let posY = e.clientY;
 
@@ -108,7 +114,7 @@ $(document).ready(function () {
             $('#icon').addClass('click-animation');
             setTimeout(() => {
                 $('#icon').removeClass('click-animation');
-            }, 200); 
+            }, 400); 
             $('.add').on('click', function () {
                 $(this).toggle();
             });
@@ -166,6 +172,7 @@ $(document).ready(function () {
     $('#icon').on('click', handleClick);
     $('#icon').on('touchend', handleTouchEnd);
 
+// Панелька навігації
     $('#task').on('click', () => {
         $('#task span').addClass('onselect');
         $('#home span').removeClass('onselect');
@@ -196,6 +203,7 @@ $(document).ready(function () {
         $('.boost-cont').css('display', 'flex');
     });
 
+    // Відновлення енергії
     const regenerationEnergy = setInterval(() => {
         if (energy < 1000) {
             energy += 3;
@@ -209,6 +217,7 @@ $(document).ready(function () {
         }
     }, RECHARGE_INTERVAL);
 
+    // Перехід на тгк в тасках
     $('.btn-join').on('click', () => {
         if (taskEneble == true){
             window.location.href = 'https://t.me/+bJd4dlSzY2ozZTNi';
@@ -226,6 +235,7 @@ $(document).ready(function () {
         }
     });
 
+    // Буст на мульти кллік ну тіп спочатку +1 потім +2 і тд
     $('.boost-1').on('click', () => {
         let forBoost = {
             '1k': 1000,
@@ -283,6 +293,7 @@ $(document).ready(function () {
         } 
     });
 
+    // Оверлай який появляєтся при відкритті буста та якшо на нього нажати вікно з бустом закриєтся
     $('.overlay').on('click', () => {
         $('.dialog-boost').hide();
         $('.overlay').removeClass('overlay-on');
