@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+
+</head>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, #FFBFBF 0%, #FFFFFF 100%);
+        background-size: cover;
+        background-attachment: fixed;
+        user-select: none;
+    }
+    #lottie-animation {
+        width: 300px;
+        height: 300px;
+    }
+</style>
+<body>
+    <div id="lottie-animation"></div>
+
+</body>
+<script>
+    let animation = lottie.loadAnimation({
+      container: document.getElementById('lottie-animation'), 
+      renderer: 'svg', 
+      loop: true, 
+      autoplay: true, 
+      path: 'animations/load.json' 
+    });
+    setTimeout(() => {
+        window.location.href = 'index.html'
+    }, 3500);
+  </script>
+  
+</html>
