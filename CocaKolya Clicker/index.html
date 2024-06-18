@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>CocaKolya Clicker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container position-absolute task-cont mt-5">
+        <div class="row">
+            <h1 style="text-align: center; color: #5A5A5A;">ваш баланс</h1>
+            <div class="col-12 d-flex justify-content-center">
+                <img src="img/energy.png" alt="" id="task-page-score-icon">
+                <div class="score" id="score-task-page">5.000</div>
+            </div>
+            <div class="col-12 task-info-div">
+                <h1 style="font-size: 27px;">таски</h1>
+            </div>
+            <div class="col-12 task-info-div" style="border-top: none; background-color: #E50000; color: white">
+                <h1>действуй и получай банки</h1>
+            </div>
+            <div class="col-12 task-1 d-flex">
+                <div class="task-icon" style="color: white; background-color: #0499E9;">TG</div>
+            <div class="text-reward">
+                <span class="textinfo2">Join $CocaKolya TG</span>
+                <div class="reward">
+                    <img src="img/bottle.png" alt="">
+                    <span class="textinfo2" style="color: #E50000; margin-top: -13px;">+100,000</span>
+                </div>
+            </div>
+            <div class="btn-join" id="btn-join">
+                <img src="img/go.png" alt="" srcset="" id="go-to">
+
+            </div>
+
+        </div>
+            <hr class="hr" style="margin-top: 10px;">
+    </div>
+</div>
+
+<div class="container position-absolute boost-cont mt-5">
+    <div class="textbal">
+        ваш баланс
+    </div>
+    <div class="row">
+        <div class="col-12 position-absolute cont-score-icon">
+            <img src="img/energy.png" alt="" id="ic">
+
+        <div class="user-balance">
+            5.000
+        </div>
+    </div>
+    <div class="col-12 container-text-boost position-absolute">
+        <div class="txt-1" style="border-bottom: none">бусты</div>
+        <div class="txt-2">улучшай и фарми больше!</div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="boosters">
+        <div class="col-12 boost-1 d-flex">
+            <img src="img/touch.png" alt="" class="boost-image">
+            <div class="textboost">
+                <div class="textinfo">Мультитап</div>
+                <div class="price">
+                    <img src="img/bottle.png" alt="" id="iconinboost">
+                    <span class="textinfo boostprice" id="pr-bt-1">1k</span>
+                    <span class="lvl"> 1 lvl</span>
+                    <div class="bg-open">
+                        <img src="img/go.png" alt="" class="open">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 boost-2 d-flex">
+            <img src="img/energy.png" alt="" class="boost-image">
+            <div class="textboost">
+                <div class="textinfo">энергия</div>
+                <div class="price">
+                    <img src="img/bottle.png" alt="" id="iconinboost">
+                    <span class="textinfo boostprice" id="pr-bt-2">1k</span>
+                    <span class="lvl"> 1 lvl</span>
+                    <div class="bg-open">
+                        <img src="img/go.png" alt="" class="open">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="container d-flex flex-column mt-5 conthome">
+        <div class="d-flex justify-content-center">
+            <img src="img/energy.png" alt="" class="icon-score">
+                
+            <div class="score">5.000</div>
+        </div>
+        <div class="animat">
+            <div class="containr">
+                <div class="icone" id="icon1"><img src="img/bottle.png" alt="Icon 1"></div>
+                <div class="icone" id="icon2"><img src="img/bottle.png" alt="Icon 2"></div>
+                <div class="icone" id="icon3"><img src="img/bottle.png" alt="Icon 3"></div>
+                <div class="icone" id="icon4"><img src="img/bottle.png" alt="Icon 4"></div>
+                <div class="icone" id="icon5"><img src="img/bottle.png" alt="Icon 5"></div>
+                <div class="icone" id="icon6"><img src="img/bottle.png" alt="Icon 6"></div>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center icon">
+            <img src="img/logo.png" draggable="false" alt="" id="icon">
+        </div>
+        <div class="row scorebare">
+            
+            
+        </div>
+        <div class="iconenergy col-8 d-flex justify-content-center">
+            <img src="img/energy.png" alt="" id="bottle">
+                
+        </div>
+        <div class="col-4 d-flex energy">
+            <span id="user-energy">1000</span>
+            <span id="count-energy">/1000</span>
+        </div>
+        <div class="progress prb" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 100%"></div>
+        </div>
+    </div>
+    <div class="container p-0">
+        <div class="row nav-row">
+            <div class="col-3 d-flex flex-column">
+                <div class="box-home onselect">
+                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="ico home">
+                    <path d="M28.6882 25.7849H25.8495V28.6236H28.6882V25.7849Z" fill="#E50000"/>
+                    <path d="M28.6882 22.9462H25.8495V25.7849H28.6882V22.9462Z" fill="#E50000"/>
+                    <path d="M28.6882 20.1075H25.8495V22.9462H28.6882V20.1075Z" fill="#E50000"/>
+                    <path d="M28.6882 17.2688H25.8495V20.1075H28.6882V17.2688Z" fill="#E50000"/>
+                    <path d="M28.6882 14.4301H25.8495V17.2688H28.6882V14.4301Z" fill="#E50000"/>
+                    <path d="M28.6882 11.5914H25.8495V14.4301H28.6882V11.5914Z" fill="#E50000"/>
+                    <path d="M25.8495 25.7849H23.0107V28.6236H25.8495V25.7849Z" fill="#E50000"/>
+                    <path d="M25.8495 8.75267H23.0107V11.5914H25.8495V8.75267Z" fill="#E50000"/>
+                    <path d="M23.0107 25.7849H20.172V28.6236H23.0107V25.7849Z" fill="#E50000"/>
+                    <path d="M23.0107 5.91396H20.172V8.75267H23.0107V5.91396Z" fill="#E50000"/>
+                    <path d="M20.1721 25.7849H17.3333V28.6236H20.1721V25.7849Z" fill="#E50000"/>
+                    <path d="M20.1721 22.9462H17.3333V25.7849H20.1721V22.9462Z" fill="#E50000"/>
+                    <path d="M20.1721 20.1075H17.3333V22.9462H20.1721V20.1075Z" fill="#E50000"/>
+                    <path d="M20.1721 3.07524H17.3333V5.91395H20.1721V3.07524Z" fill="#E50000"/>
+                    <path d="M17.3333 17.2688H14.4946V20.1075H17.3333V17.2688Z" fill="#E50000"/>
+                    <path d="M17.3333 0.236542H14.4946V3.07525H17.3333V0.236542Z" fill="#E50000"/>
+                    <path d="M14.4946 17.2688H11.6559V20.1075H14.4946V17.2688Z" fill="#E50000"/>
+                    <path d="M14.4946 0.236542H11.6559V3.07525H14.4946V0.236542Z" fill="#E50000"/>
+                    <path d="M11.6559 25.7849H8.8172V28.6236H11.6559V25.7849Z" fill="#E50000"/>
+                    <path d="M11.6559 22.9462H8.8172V25.7849H11.6559V22.9462Z" fill="#E50000"/>
+                    <path d="M11.6559 20.1075H8.8172V22.9462H11.6559V20.1075Z" fill="#E50000"/>
+                    <path d="M11.6559 3.07524H8.8172V5.91395H11.6559V3.07524Z" fill="#E50000"/>
+                    <path d="M8.81719 25.7849H5.97849V28.6236H8.81719V25.7849Z" fill="#E50000"/>
+                    <path d="M8.81719 5.91396H5.97849V8.75267H8.81719V5.91396Z" fill="#E50000"/>
+                    <path d="M5.97848 25.7849H3.13977V28.6236H5.97848V25.7849Z" fill="#E50000"/>
+                    <path d="M5.97848 8.75267H3.13977V11.5914H5.97848V8.75267Z" fill="#E50000"/>
+                    <path d="M3.1398 25.7849H0.301086V28.6236H3.1398V25.7849Z" fill="#E50000"/>
+                    <path d="M3.1398 22.9462H0.301086V25.7849H3.1398V22.9462Z" fill="#E50000"/>
+                    <path d="M3.1398 20.1075H0.301086V22.9462H3.1398V20.1075Z" fill="#E50000"/>
+                    <path d="M3.1398 17.2688H0.301086V20.1075H3.1398V17.2688Z" fill="#E50000"/>
+                    <path d="M3.1398 14.4301H0.301086V17.2688H3.1398V14.4301Z" fill="#E50000"/>
+                    <path d="M3.1398 11.5914H0.301086V14.4301H3.1398V11.5914Z" fill="#E50000"/>
+                        </svg>
+                    <p>Главная</p>
+                </div>
+            </div>
+            <div class="col-3 d-flex flex-column">
+                <div class="box-task">
+                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="ico task">
+                        <path d="M22.8387 17.2688H20V20.1075H22.8387V17.2688Z" fill="white"/>
+                        <path d="M20 17.2688H17.1613V20.1075H20V17.2688Z" fill="white"/>
+                        <path d="M8.64514 17.2688H5.80643V20.1075H8.64514V17.2688Z" fill="white"/>
+                        <path d="M22.8387 11.5914H20V14.4301H22.8387V11.5914Z" fill="white"/>
+                        <path d="M20 11.5914H17.1613V14.4301H20V11.5914Z" fill="white"/>
+                        <path d="M17.1613 11.5914H14.3226V14.4301H17.1613V11.5914Z" fill="white"/>
+                        <path d="M14.3226 11.5914H11.4839V14.4301H14.3226V11.5914Z" fill="white"/>
+                        <path d="M8.64514 11.5914H5.80643V14.4301H8.64514V11.5914Z" fill="white"/>
+                        <path d="M20 5.91396H17.1613V8.75267H20V5.91396Z" fill="white"/>
+                        <path d="M17.1613 5.91396H14.3226V8.75267H17.1613V5.91396Z" fill="white"/>
+                        <path d="M14.3226 5.91396H11.4839V8.75267H14.3226V5.91396Z" fill="white"/>
+                        <path d="M25.6774 0.236542H22.8387V3.07525H25.6774V0.236542Z" fill="white"/>
+                        <path d="M22.8387 0.236542H20V3.07525H22.8387V0.236542Z" fill="white"/>
+                        <path d="M20 0.236542H17.1613V3.07525H20V0.236542Z" fill="white"/>
+                        <path d="M11.4839 0.236542H8.64517V3.07525H11.4839V0.236542Z" fill="white"/>
+                        <path d="M8.64514 0.236542H5.80643V3.07525H8.64514V0.236542Z" fill="white"/>
+                        <path d="M5.80648 0.236542H2.96777V3.07525H5.80648V0.236542Z" fill="white"/>
+                        <path d="M28.5161 3.07524H25.6774V5.91395H28.5161V3.07524Z" fill="white"/>
+                        <path d="M28.5161 8.75267H25.6774V11.5914H28.5161V8.75267Z" fill="white"/>
+                        <path d="M28.5161 5.91396H25.6774V8.75267H28.5161V5.91396Z" fill="white"/>
+                        <path d="M28.5161 22.9462H25.6774V25.7849H28.5161V22.9462Z" fill="white"/>
+                        <path d="M28.5161 20.1075H25.6774V22.9462H28.5161V20.1075Z" fill="white"/>
+                        <path d="M28.5161 17.2688H25.6774V20.1075H28.5161V17.2688Z" fill="white"/>
+                        <path d="M28.5161 14.4301H25.6774V17.2688H28.5161V14.4301Z" fill="white"/>
+                        <path d="M28.5161 11.5914H25.6774V14.4301H28.5161V11.5914Z" fill="white"/>
+                        <path d="M25.6774 25.7849H22.8387V28.6236H25.6774V25.7849Z" fill="white"/>
+                        <path d="M22.8387 25.7849H20V28.6236H22.8387V25.7849Z" fill="white"/>
+                        <path d="M22.8387 5.91396H20V8.75267H22.8387V5.91396Z" fill="white"/>
+                        <path d="M20 25.7849H17.1613V28.6236H20V25.7849Z" fill="white"/>
+                        <path d="M17.1613 25.7849H14.3226V28.6236H17.1613V25.7849Z" fill="white"/>
+                        <path d="M17.1613 17.2688H14.3226V20.1075H17.1613V17.2688Z" fill="white"/>
+                        <path d="M17.1613 0.236542H14.3226V3.07525H17.1613V0.236542Z" fill="white"/>
+                        <path d="M14.3226 25.7849H11.4839V28.6236H14.3226V25.7849Z" fill="white"/>
+                        <path d="M14.3226 17.2688H11.4839V20.1075H14.3226V17.2688Z" fill="white"/>
+                        <path d="M14.3226 0.236542H11.4839V3.07525H14.3226V0.236542Z" fill="white"/>
+                        <path d="M11.4839 25.7849H8.64517V28.6236H11.4839V25.7849Z" fill="white"/>
+                        <path d="M8.64514 25.7849H5.80643V28.6236H8.64514V25.7849Z" fill="white"/>
+                        <path d="M8.64514 5.91396H5.80643V8.75267H8.64514V5.91396Z" fill="white"/>
+                        <path d="M5.80648 25.7849H2.96777V28.6236H5.80648V25.7849Z" fill="white"/>
+                        <path d="M2.96774 22.9462H0.129028V25.7849H2.96774V22.9462Z" fill="white"/>
+                        <path d="M2.96774 20.1075H0.129028V22.9462H2.96774V20.1075Z" fill="white"/>
+                        <path d="M2.96774 17.2688H0.129028V20.1075H2.96774V17.2688Z" fill="white"/>
+                        <path d="M2.96774 14.4301H0.129028V17.2688H2.96774V14.4301Z" fill="white"/>
+                        <path d="M2.96774 11.5914H0.129028V14.4301H2.96774V11.5914Z" fill="white"/>
+                        <path d="M2.96774 8.75267H0.129028V11.5914H2.96774V8.75267Z" fill="white"/>
+                        <path d="M2.96774 5.91396H0.129028V8.75267H2.96774V5.91396Z" fill="white"/>
+                        <path d="M2.96774 3.07524H0.129028V5.91395H2.96774V3.07524Z" fill="white"/>
+                        </svg>
+                        
+                    <p>Таски</p>
+                </div>
+            </div>
+            
+            <div class="col-3 d-flex flex-column">
+                <div class="box-boost">
+                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="ico list-boost">
+                        <path d="M28.3978 25.7849H25.5591V28.6236H28.3978V25.7849Z" fill="white"/>
+                        <path d="M28.3978 11.5914H25.5591V14.4301H28.3978V11.5914Z" fill="white"/>
+                        <path d="M25.5591 22.9462H22.7204V25.7849H25.5591V22.9462Z" fill="white"/>
+                        <path d="M25.5591 8.75267H22.7204V11.5914H25.5591V8.75267Z" fill="white"/>
+                        <path d="M22.7204 20.1075H19.8817V22.9462H22.7204V20.1075Z" fill="white"/>
+                        <path d="M22.7204 5.91396H19.8817V8.75267H22.7204V5.91396Z" fill="white"/>
+                        <path d="M19.8817 17.2688H17.043V20.1075H19.8817V17.2688Z" fill="white"/>
+                        <path d="M19.8817 3.07524H17.043V5.91395H19.8817V3.07524Z" fill="white"/>
+                        <path d="M17.043 14.4301H14.2043V17.2688H17.043V14.4301Z" fill="white"/>
+                        <path d="M17.043 0.236542H14.2043V3.07525H17.043V0.236542Z" fill="white"/>
+                        <path d="M14.2043 14.4301H11.3656V17.2688H14.2043V14.4301Z" fill="white"/>
+                        <path d="M14.2043 0.236542H11.3656V3.07525H14.2043V0.236542Z" fill="white"/>
+                        <path d="M11.3656 17.2688H8.52686V20.1075H11.3656V17.2688Z" fill="white"/>
+                        <path d="M11.3656 3.07524H8.52686V5.91395H11.3656V3.07524Z" fill="white"/>
+                        <path d="M8.52688 20.1075H5.68817V22.9462H8.52688V20.1075Z" fill="white"/>
+                        <path d="M8.52688 5.91396H5.68817V8.75267H8.52688V5.91396Z" fill="white"/>
+                        <path d="M5.68817 22.9462H2.84946V25.7849H5.68817V22.9462Z" fill="white"/>
+                        <path d="M5.68817 8.75267H2.84946V11.5914H5.68817V8.75267Z" fill="white"/>
+                        <path d="M2.84945 25.7849H0.0107422V28.6236H2.84945V25.7849Z" fill="white"/>
+                        <path d="M2.84945 11.5914H0.0107422V14.4301H2.84945V11.5914Z" fill="white"/>
+                        </svg>
+                    <p> бусты</p>
+                </div>
+            </div>
+
+            <div class="col-3 d-flex flex-column">
+                <div class="box-referals">
+                    <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg" class="ico invite">
+                        <path d="M15.086 11.5914H12.2473V14.4301H15.086V11.5914Z" fill="white"/>
+                        <path d="M17.9247 11.5914H15.086V14.4301H17.9247V11.5914Z" fill="white"/>
+                        <path d="M20.7634 11.5914H17.9247V14.4301H20.7634V11.5914Z" fill="white"/>
+                        <path d="M23.6021 8.75267H20.7634V11.5914H23.6021V8.75267Z" fill="white"/>
+                        <path d="M23.6021 5.91396H20.7634V8.75267H23.6021V5.91396Z" fill="white"/>
+                        <path d="M23.6021 3.07524H20.7634V5.91395H23.6021V3.07524Z" fill="white"/>
+                        <path d="M20.7634 0.236542H17.9247V3.07525H20.7634V0.236542Z" fill="white"/>
+                        <path d="M17.9247 0.236542H15.086V3.07525H17.9247V0.236542Z" fill="white"/>
+                        <path d="M15.086 0.236542H12.2473V3.07525H15.086V0.236542Z" fill="white"/>
+                        <path d="M12.2472 0.236542H9.40851V3.07525H12.2472V0.236542Z" fill="white"/>
+                        <path d="M9.40859 5.91396H6.56989V8.75267H9.40859V5.91396Z" fill="white"/>
+                        <path d="M9.40859 3.07524H6.56989V5.91395H9.40859V3.07524Z" fill="white"/>
+                        <path d="M9.40859 8.75267H6.56989V11.5914H9.40859V8.75267Z" fill="white"/>
+                        <path d="M12.2472 11.5914H9.40851V14.4301H12.2472V11.5914Z" fill="white"/>
+                        <path d="M9.40859 25.7849H6.56989V28.6236H9.40859V25.7849Z" fill="white"/>
+                        <path d="M6.56991 25.7849H3.7312V28.6236H6.56991V25.7849Z" fill="white"/>
+                        <path d="M26.4408 25.7849H23.6021V28.6236H26.4408V25.7849Z" fill="white"/>
+                        <path d="M23.6021 25.7849H20.7634V28.6236H23.6021V25.7849Z" fill="white"/>
+                        <path d="M20.7634 25.7849H17.9247V28.6236H20.7634V25.7849Z" fill="white"/>
+                        <path d="M17.9247 25.7849H15.086V28.6236H17.9247V25.7849Z" fill="white"/>
+                        <path d="M15.086 25.7849H12.2473V28.6236H15.086V25.7849Z" fill="white"/>
+                        <path d="M12.2472 25.7849H9.40851V28.6236H12.2472V25.7849Z" fill="white"/>
+                        <path d="M29.2795 25.7849H26.4408V28.6236H29.2795V25.7849Z" fill="white"/>
+                        <path d="M29.2795 20.1075H26.4408V22.9462H29.2795V20.1075Z" fill="white"/>
+                        <path d="M29.2795 22.9462H26.4408V25.7849H29.2795V22.9462Z" fill="white"/>
+                        <path d="M26.4408 17.2688H23.6021V20.1075H26.4408V17.2688Z" fill="white"/>
+                        <path d="M23.6021 17.2688H20.7634V20.1075H23.6021V17.2688Z" fill="white"/>
+                        <path d="M20.7634 17.2688H17.9247V20.1075H20.7634V17.2688Z" fill="white"/>
+                        <path d="M17.9247 17.2688H15.086V20.1075H17.9247V17.2688Z" fill="white"/>
+                        <path d="M15.086 17.2688H12.2473V20.1075H15.086V17.2688Z" fill="white"/>
+                        <path d="M12.2472 17.2688H9.40851V20.1075H12.2472V17.2688Z" fill="white"/>
+                        <path d="M9.40859 17.2688H6.56989V20.1075H9.40859V17.2688Z" fill="white"/>
+                        <path d="M6.56991 17.2688H3.7312V20.1075H6.56991V17.2688Z" fill="white"/>
+                        <path d="M3.73117 20.1075H0.892456V22.9462H3.73117V20.1075Z" fill="white"/>
+                        <path d="M3.73117 22.9462H0.892456V25.7849H3.73117V22.9462Z" fill="white"/>
+                        <path d="M3.73117 25.7849H0.892456V28.6236H3.73117V25.7849Z" fill="white"/>
+                        </svg>
+                        
+                    <p>друзья</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-boost">
+        <div class="up">
+            <div class="line-border-5"></div>
+            <div class="line-border-6"></div>
+            <div class="line-border-4"></div>
+        </div>
+        <div class="line-border-1">
+            <div class="line-border-3"></div>
+            <div class="line-border-2"></div>
+        </div>
+        <img src="img/touch.png" alt="">
+            
+        <h1>мультитап</h1>
+        <p id="info-boost">увеличивает кол-во банок, которые<br>ты можешь фармить за один тап</p>
+        <span id="getPoints">+1 банка за тап за 1lvl</span>
+        <div class="price" id="inBoost">
+            <img src="img/bottle.png" alt="" class="iconinboost">
+                
+            <span class="boostprice">1k</span>
+            <span class="lvl"> 1lvl</span>
+            <div class="btn-done">приобрести</div>
+        </div>
+    </div>
+
+    <div class="dialog-boost-energy">
+        <div class="up">
+            <div class="line-border-5"></div>
+            <div class="line-border-6"></div>
+            <div class="line-border-4"></div>
+        </div>
+        <div class="line-border-1">
+            <div class="line-border-3"></div>
+            <div class="line-border-2"></div>
+        </div>
+        <div class="energy-icon">
+            <img src="img/energy.png" alt="">
+        </div>
+
+
+        <h1>энергия</h1>
+        <p id="info-boost">увеличивает кол-во времени, которое ты можешь тапать</p>
+        <span id="getPoints">+500 энергии за 1lvl</span>
+        <div class="price" id="inBoost">
+            <img src="img/bottle.png" alt="" class="iconinboost" id="icoinboost-energy">
+
+            <span class="boostprice">1k</span>
+            <span class="lvl"> 1lvl</span>
+            <div class="btn-done-energy">приобрести</div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="container position-absolute referals mt-5" style="display:none;">
+        <div class="row">
+            <div class="col-12">
+                <div class="referals-cont">
+                <h1>ваши рефералы</h1>
+                <h1 class="referals-count">
+                    0
+                </h1>
+            </div>
+            </div>
+        </div>
+        <div class="row invite-bar">
+            <div class="col-1">
+                <img src="img/bottle.png" alt="">
+                </div>
+            <div class="col-6">
+                <h1>+5000/друг</h1>
+            </div>
+            <div class="col-5">
+                <button class="invite-friend">пригласить</button>
+            </div>
+            </div>
+
+        <div class="row no-friends-container" style="display: none;">
+            <div class="col-12">
+                <h1 class="no-friends-h1">у вас <br> нет друзей :(</h1>
+                <div class="your-link">
+                    <a href="javascript:;">скопировать ссылку</a>
+                </div>
+            </div>
+        </div>
+
+        
+            
+            <div class="cont-referals col-12">
+                <div class="row have-friends-container">
+                    <div class="col-8">
+                        <h1 class="nickname">NICKNAME</h1>
+                    </div>
+                        <div class="col-3">
+                            <h1>+5000</h1>
+                        </div>
+                        <div class="col-1">
+                            <img src="img/bottle.png" alt="">
+                        </div>
+                        <hr>
+                    </div>
+                   
+            </div>
+
+        </div>
+</body>
+</html>
